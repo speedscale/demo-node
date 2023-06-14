@@ -1,3 +1,9 @@
+speedscale-docker-capture.yaml
+compose-capture-merged.yaml
+
+speedscale-docker-replay.yaml
+compose-replay-merged.yaml
+
 # Logs
 logs
 *.log

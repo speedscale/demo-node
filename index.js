@@ -48,8 +48,10 @@ app.get('/nasa', async (req, res) => {
     const data = await got(url, options).json()
     res.send(data)
   } catch (err) {
-    res.status = 500
-    res.send(makeError(err))
+    const msg = makeError(err)
+    console.error(msg)
+    res.status(500)
+    res.send(msg)
   }
 })
 
@@ -59,8 +61,10 @@ app.get('/events', async (req, res) => {
     const data = await got(url).json()
     res.send(data)
   } catch (err) {
-    res.status = 500
-    res.send(makeError(err))
+    const msg = makeError(err)
+    console.error(msg)
+    res.status(500)
+    res.send(msg)
   }
 })
 
@@ -74,8 +78,10 @@ app.get('/bin', async (req, res) => {
     }).json()
     res.send(data)
   } catch (err) {
-    res.status = 500
-    res.send(makeError(err))
+    const msg = makeError(err)
+    console.error(msg)
+    res.status(500)
+    res.send(msg)
   }
 
 })
